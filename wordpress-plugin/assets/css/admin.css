@@ -1,0 +1,317 @@
+/* JSPrintManager CTT Integration - Admin Styles */
+
+.jspm-ctt-admin-page {
+    max-width: 1200px;
+    margin: 20px 0;
+}
+
+.jspm-ctt-header {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 4px solid #0066cc;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.jspm-ctt-header h1 {
+    margin: 0 0 10px 0;
+    color: #0066cc;
+}
+
+.jspm-ctt-controls {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.jspm-ctt-control-group {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.jspm-ctt-control-group label {
+    font-weight: 600;
+    min-width: 120px;
+}
+
+.jspm-ctt-control-group select,
+.jspm-ctt-control-group input[type="number"] {
+    min-width: 200px;
+}
+
+.jspm-ctt-print-mode {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.jspm-ctt-print-mode label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.jspm-ctt-orders-table {
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.jspm-ctt-orders-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.jspm-ctt-orders-table th,
+.jspm-ctt-orders-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.jspm-ctt-orders-table th {
+    background: #f7f7f7;
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.jspm-ctt-orders-table tbody tr:hover {
+    background: #f9f9f9;
+}
+
+.jspm-ctt-orders-table .order-checkbox {
+    width: 40px;
+    text-align: center;
+}
+
+.jspm-ctt-orders-table .order-id {
+    font-weight: 600;
+    color: #0066cc;
+}
+
+.jspm-ctt-orders-table .order-status {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.jspm-ctt-orders-table .order-status.processing {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.jspm-ctt-orders-table .order-status.completed {
+    background: #d4edda;
+    color: #155724;
+}
+
+.jspm-ctt-orders-table .order-status.pending {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.jspm-ctt-actions {
+    background: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.jspm-ctt-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.jspm-ctt-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.jspm-ctt-btn-primary {
+    background: #0066cc;
+    color: #fff;
+}
+
+.jspm-ctt-btn-primary:hover {
+    background: #0052a3;
+}
+
+.jspm-ctt-btn-success {
+    background: #28a745;
+    color: #fff;
+}
+
+.jspm-ctt-btn-success:hover {
+    background: #218838;
+}
+
+.jspm-ctt-btn-secondary {
+    background: #6c757d;
+    color: #fff;
+}
+
+.jspm-ctt-btn-secondary:hover {
+    background: #5a6268;
+}
+
+.jspm-ctt-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.jspm-ctt-status {
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 4px;
+    display: none;
+}
+
+.jspm-ctt-status.show {
+    display: block;
+}
+
+.jspm-ctt-status.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.jspm-ctt-status.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.jspm-ctt-status.info {
+    background: #d1ecf1;
+    color: #0c5460;
+    border: 1px solid #bee5eb;
+}
+
+.jspm-ctt-loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255,255,255,0.3);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: jspm-ctt-spin 0.6s linear infinite;
+}
+
+@keyframes jspm-ctt-spin {
+    to { transform: rotate(360deg); }
+}
+
+.jspm-ctt-settings {
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.jspm-ctt-settings-section {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.jspm-ctt-settings-section:last-child {
+    border-bottom: none;
+}
+
+.jspm-ctt-settings-section h2 {
+    margin: 0 0 20px 0;
+    color: #0066cc;
+}
+
+.jspm-ctt-form-group {
+    margin-bottom: 20px;
+}
+
+.jspm-ctt-form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.jspm-ctt-form-group input[type="text"],
+.jspm-ctt-form-group input[type="email"],
+.jspm-ctt-form-group input[type="number"],
+.jspm-ctt-form-group select,
+.jspm-ctt-form-group textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.jspm-ctt-form-group small {
+    display: block;
+    margin-top: 5px;
+    color: #666;
+}
+
+.jspm-ctt-selected-count {
+    font-weight: 600;
+    color: #0066cc;
+    padding: 10px;
+    background: #f0f8ff;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+/* Order meta box styles */
+#jspm-ctt-order-actions {
+    padding: 10px;
+}
+
+#jspm-ctt-order-actions button {
+    width: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+#jspm-ctt-order-actions .jspm-ctt-status {
+    padding: 10px;
+    margin: 10px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .jspm-ctt-control-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .jspm-ctt-actions {
+        flex-direction: column;
+    }
+    
+    .jspm-ctt-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}

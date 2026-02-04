@@ -1,0 +1,223 @@
+/* Modal per configurare ordini */
+.jspm-ctt-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.7);
+    z-index: 99999;
+    overflow-y: auto;
+}
+
+.jspm-ctt-modal.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.jspm-ctt-modal-content {
+    background: #fff;
+    border-radius: 8px;
+    max-width: 900px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+
+.jspm-ctt-modal-header {
+    background: #0066cc;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.jspm-ctt-modal-header h2 {
+    margin: 0;
+    color: #fff;
+}
+
+.jspm-ctt-modal-close {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 28px;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+}
+
+.jspm-ctt-modal-close:hover {
+    opacity: 0.8;
+}
+
+.jspm-ctt-modal-body {
+    padding: 20px;
+}
+
+.jspm-ctt-order-config {
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 15px;
+    background: #f9f9f9;
+}
+
+.jspm-ctt-order-config:last-child {
+    margin-bottom: 0;
+}
+
+.jspm-ctt-order-config-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #0066cc;
+}
+
+.jspm-ctt-order-config-header h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #0066cc;
+}
+
+.jspm-ctt-order-config-fields {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.jspm-ctt-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.jspm-ctt-field label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-size: 13px;
+}
+
+.jspm-ctt-field input,
+.jspm-ctt-field select {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.jspm-ctt-field input:focus,
+.jspm-ctt-field select:focus {
+    outline: none;
+    border-color: #0066cc;
+    box-shadow: 0 0 0 2px rgba(0,102,204,0.1);
+}
+
+.jspm-ctt-field small {
+    margin-top: 3px;
+    color: #666;
+    font-size: 12px;
+}
+
+.jspm-ctt-modal-footer {
+    padding: 20px;
+    border-top: 1px solid #e5e5e5;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.jspm-ctt-quick-fill {
+    display: flex;
+    gap: 10px;
+    padding: 15px;
+    background: #e7f3ff;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.jspm-ctt-quick-fill label {
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.jspm-ctt-quick-fill input,
+.jspm-ctt-quick-fill select {
+    padding: 6px 10px;
+    border: 1px solid #0066cc;
+    border-radius: 4px;
+}
+
+.jspm-ctt-quick-fill button {
+    padding: 6px 15px;
+    background: #0066cc;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.jspm-ctt-quick-fill button:hover {
+    background: #0052a3;
+}
+
+/* Indicatore destinazione */
+.jspm-ctt-destination-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: 600;
+    margin-left: 8px;
+}
+
+.jspm-ctt-destination-badge.national {
+    background: #d4edda;
+    color: #155724;
+}
+
+.jspm-ctt-destination-badge.international {
+    background: #fff3cd;
+    color: #856404;
+}
+
+/* Product badge */
+.jspm-ctt-product-info {
+    font-size: 12px;
+    color: #666;
+    margin-top: 2px;
+}
+
+/* Responsive modal */
+@media (max-width: 768px) {
+    .jspm-ctt-modal-content {
+        margin: 10px;
+    }
+    
+    .jspm-ctt-order-config-fields {
+        grid-template-columns: 1fr;
+    }
+    
+    .jspm-ctt-quick-fill {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .jspm-ctt-quick-fill input,
+    .jspm-ctt-quick-fill select,
+    .jspm-ctt-quick-fill button {
+        width: 100%;
+    }
+}
